@@ -1,6 +1,7 @@
 import TestingAPICalls from "./components/TestingAPICalls";
-import FirstTest from "./old/FirstTest";
-import TestWithMockData from "./old/TestWithMockData-1";
+// import FirstTest from "./old/FirstTest";
+// import TestWithMockData from "./old/TestWithMockData-1";
+
 
 
 const data = [{
@@ -69,8 +70,6 @@ const data = [{
 function App() {
   return (
     <div className="App">
-        {/* <FirstTest/> */}
-        {/* <TestWithMockData data={data} /> */}
         <TestingAPICalls/>
     </div>
   );

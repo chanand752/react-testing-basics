@@ -3,29 +3,20 @@ import { act } from 'react-dom/test-utils'
 import TestingAPICalls from '../components/TestingAPICalls'
 import * as services from '../utils/Services'
 
-const mockData = [
-    {
-        name: 'Kunal'
-    },
-    {
-        name: 'Marcus'
-    }
-]
-
 test("Fetch Data API called", async () => {
     
 
     const mockFetchData = jest.spyOn(services, 'FetchData')
         .mockImplementation(async () => {
             return [{
-                name: 'kunal'
+                name: 'Leanne Graham'
             }];
         })
     
     render(<TestingAPICalls/>)
     expect(mockFetchData).toHaveBeenCalled();
     await waitFor(() => {
-        expect(screen.getByText(/kunal/i)).toBeInTheDocument();
+        expect(screen.getByText(/Leanne Graham/i)).toBeInTheDocument();
     })
     
 })

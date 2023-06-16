@@ -1,5 +1,5 @@
 export const FetchData = () => {
-    return fetch("http://localhost:3000/data.json")
+    return fetch("https://jsonplaceholder.typicode.com/users")
         .then(res => {
             return res.json();
         })
